@@ -4,13 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ward 16 Public Complaint Portal | Panipat</title>
-    <meta name="description" content="Official public complaint portal for Ward 16, Panipat, Haryana." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <style>
-        /* ===== RESET & BASE ===== */
         *{margin:0;padding:0;box-sizing:border-box}
         :root{--orange:#FF6B00;--orange-dark:#e05e00;--orange-light:#ff8c33;--white:#fff;--off-white:#f9fafb;--gray-100:#f3f4f6;--gray-200:#e5e7eb;--gray-300:#d1d5db;--gray-600:#6b7280;--gray-800:#1f2937;--gray-900:#111827;--shadow-sm:0 1px 2px rgba(0,0,0,0.05);--shadow-md:0 4px 6px -1px rgba(0,0,0,0.1);--shadow-lg:0 10px 15px -3px rgba(0,0,0,0.1);--shadow-xl:0 20px 25px -5px rgba(0,0,0,0.1);--radius:12px;--radius-lg:20px;--transition:.3s cubic-bezier(0.4,0,0.2,1)}
         html{scroll-behavior:smooth;font-size:16px}
@@ -33,14 +31,12 @@
         .btn-secondary{background:var(--white);color:var(--gray-900);border:2px solid var(--gray-200)}
         .btn-secondary:hover{background:var(--gray-100);border-color:var(--gray-300);transform:translateY(-2px)}
         .btn-large{padding:1rem 2.5rem;font-size:1.1rem}
-        .btn-success{background:#2e7d32;color:#fff}
-        .btn-success:hover{background:#1b5e20;transform:scale(1.05)}
         .btn-whatsapp{background:#25d366;color:#fff}
         .btn-whatsapp:hover{background:#1ebe5a;transform:scale(1.05)}
-        .btn-email{background:#d44637;color:#fff}
-        .btn-email:hover{background:#b93a2e;transform:scale(1.05)}
         .btn-phone{background:#34a853;color:#fff}
         .btn-phone:hover{background:#2d8f47;transform:scale(1.05)}
+        .btn-email{background:#d44637;color:#fff}
+        .btn-email:hover{background:#b93a2e;transform:scale(1.05)}
         .navbar{position:fixed;top:0;left:0;width:100%;z-index:1000;background:rgba(255,255,255,.85);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.3);transition:var(--transition);box-shadow:0 1px 3px rgba(0,0,0,.05)}
         .nav-container{max-width:1200px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:70px}
         .nav-brand{display:flex;align-items:center;gap:.75rem;cursor:pointer}
@@ -56,7 +52,6 @@
         .page-section{display:none;animation:fadeInPage .4s ease}
         .page-section.active{display:block}
         @keyframes fadeInPage{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-        /* ===== HERO ===== */
         .hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:6rem 1.5rem 4rem;background:linear-gradient(135deg,#fff6f0 0%,#fff 60%,#f0f7f0 100%);overflow:hidden}
         .hero-overlay{position:absolute;inset:0;background:radial-gradient(circle at 20% 50%,rgba(255,107,0,.08) 0%,transparent 60%),radial-gradient(circle at 80% 80%,rgba(46,125,50,.06) 0%,transparent 50%);pointer-events:none}
         .hero-content{position:relative;z-index:2;max-width:900px;width:100%;text-align:center}
@@ -72,7 +67,6 @@
         .stat-divider{width:1px;height:40px;background:var(--gray-200)}
         .hero-scroll-indicator{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.3rem;color:var(--gray-600);font-size:.75rem;font-weight:500;animation:bounceDown 2s infinite}
         @keyframes bounceDown{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
-        /* ===== WELCOME ===== */
         .welcome{background:var(--white)}
         .welcome-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2rem;margin-top:2rem}
         .welcome-card{padding:2rem 1.5rem;text-align:center;transition:var(--transition)}
@@ -80,7 +74,6 @@
         .welcome-icon{font-size:2.5rem;color:var(--orange);margin-bottom:1rem}
         .welcome-card h3{font-size:1.25rem;font-weight:700;margin-bottom:.5rem}
         .welcome-card p{color:var(--gray-600);font-size:.95rem}
-        /* ===== SERVICES PREVIEW ===== */
         .services-preview{background:var(--off-white)}
         .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem}
         .service-card{padding:1.5rem 1rem;text-align:center;transition:var(--transition);background:rgba(255,255,255,.6);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.3);border-radius:var(--radius);box-shadow:var(--shadow-sm)}
@@ -88,7 +81,6 @@
         .service-icon{font-size:2rem;color:var(--orange);margin-bottom:.75rem}
         .service-card h4{font-weight:700;font-size:1.1rem;margin-bottom:.25rem}
         .service-card p{font-size:.9rem;color:var(--gray-600)}
-        /* ===== WELFARE ===== */
         .welfare{background:linear-gradient(135deg,#f9fafb 0%,#fff 100%)}
         .welfare-box{display:flex;align-items:center;gap:3rem;padding:3rem;background:rgba(255,255,255,.75);backdrop-filter:blur(12px);border-radius:var(--radius-lg);border:1px solid rgba(255,255,255,.5);box-shadow:var(--shadow-lg)}
         .welfare-content{flex:2}
@@ -98,8 +90,7 @@
         .welfare-quote i{font-size:1.5rem;opacity:.6}
         .welfare-image{flex:1;display:flex;justify-content:center;align-items:center}
         .welfare-image img{width:160px;height:160px;border-radius:50%;object-fit:cover;box-shadow:0 8px 30px rgba(255,107,0,.3)}
-        /* ===== ABOUT ===== */
-        .about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin-top:2rem}
+        .about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;margin-top:2rem}
         .profile-card{padding:2rem;text-align:center;transition:var(--transition)}
         .profile-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-xl)}
         .profile-img{width:140px;height:140px;border-radius:50%;margin:0 auto 1rem;border:4px solid var(--orange);overflow:hidden;background:var(--gray-200)}
@@ -108,13 +99,11 @@
         .profile-card .designation{color:var(--orange);font-weight:600;font-size:.95rem;margin:.25rem 0 .75rem}
         .profile-card p{color:var(--gray-600);font-size:.95rem;line-height:1.7}
         .profile-card .party-tag{display:inline-block;background:rgba(255,107,0,.12);padding:.2rem .75rem;border-radius:50px;font-size:.75rem;font-weight:600;color:var(--orange);margin:.5rem 0 .75rem}
-        .mayor-card{display:inline-block;padding:1.5rem 2.5rem;border-radius:var(--radius);background:rgba(255,255,255,.7);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.3);box-shadow:var(--shadow-lg)}
-        .mayor-card .mayor-img{width:120px;height:120px;border-radius:50%;overflow:hidden;border:4px solid var(--orange);margin:0 auto .75rem}
-        .mayor-card .mayor-img img{width:100%;height:100%;object-fit:cover}
-        .mayor-card h3{font-size:1.3rem;font-weight:700}
-        .mayor-card .mayor-desig{color:var(--orange);font-weight:600;font-size:.95rem}
-        .mayor-card .mayor-detail{color:var(--gray-600);font-size:.9rem;max-width:400px;margin:.25rem auto 0}
-        /* ===== COMPLAINT FORM ===== */
+        .leader-card{display:inline-block;padding:1.5rem 2rem;border-radius:var(--radius);background:rgba(255,255,255,.7);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.3);box-shadow:var(--shadow-lg);margin:.5rem}
+        .leader-card .leader-img{width:120px;height:120px;border-radius:50%;overflow:hidden;border:4px solid var(--orange);margin:0 auto .75rem}
+        .leader-card .leader-img img{width:100%;height:100%;object-fit:cover}
+        .leader-card h3{font-size:1.3rem;font-weight:700}
+        .leader-card .leader-desig{color:var(--orange);font-weight:600;font-size:.95rem}
         .complaint-form-wrapper{max-width:720px;margin:0 auto;padding:2.5rem;background:rgba(255,255,255,.75);backdrop-filter:blur(12px);border-radius:var(--radius-lg);border:1px solid rgba(255,255,255,.5);box-shadow:var(--shadow-lg)}
         .form-group{margin-bottom:1.5rem}
         .form-group label{display:block;font-weight:600;font-size:.95rem;margin-bottom:.4rem;color:var(--gray-800)}
@@ -129,20 +118,17 @@
         .form-file-label i{margin-right:.5rem}
         .form-file-input{display:none}
         .form-submit{width:100%;padding:1rem;font-size:1.1rem}
-        /* ===== SERVICES FULL ===== */
         .services-full-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;margin-top:2rem}
         .service-full-card{padding:2rem 1.5rem;text-align:center;transition:var(--transition);background:rgba(255,255,255,.6);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.3);border-radius:var(--radius);box-shadow:var(--shadow-sm)}
         .service-full-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-xl);border-color:var(--orange-light)}
         .service-full-card .service-icon{font-size:2.8rem;margin-bottom:1rem}
         .service-full-card h4{font-size:1.2rem;font-weight:700;margin-bottom:.5rem}
         .service-full-card p{color:var(--gray-600);font-size:.95rem}
-        /* ===== GALLERY ===== */
         .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin-top:2rem}
         .gallery-item{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-md);transition:var(--transition);aspect-ratio:4/3;background:var(--gray-200);position:relative}
         .gallery-item:hover{transform:scale(1.02);box-shadow:var(--shadow-xl)}
         .gallery-item img{width:100%;height:100%;object-fit:cover}
         .gallery-item .gallery-label{position:absolute;bottom:0;left:0;right:0;padding:.75rem;background:linear-gradient(transparent,rgba(0,0,0,.7));color:var(--white);font-weight:600;font-size:.9rem;text-align:center}
-        /* ===== NOTICES ===== */
         .notices-list{display:flex;flex-direction:column;gap:1.5rem;margin-top:2rem}
         .notice-card{padding:1.5rem 2rem;background:rgba(255,255,255,.7);backdrop-filter:blur(8px);border-radius:var(--radius);border-left:5px solid var(--orange);box-shadow:var(--shadow-sm);transition:var(--transition)}
         .notice-card:hover{box-shadow:var(--shadow-md);transform:translateX(4px)}
@@ -150,7 +136,6 @@
         .notice-card h4{font-size:1.1rem;font-weight:700;margin-bottom:.25rem}
         .notice-card p{color:var(--gray-600);font-size:.95rem}
         .notice-card .notice-tag{display:inline-block;padding:.15rem .75rem;border-radius:50px;font-size:.7rem;font-weight:600;text-transform:uppercase;margin-top:.5rem;background:rgba(255,107,0,.12);color:var(--orange)}
-        /* ===== CONTACT ===== */
         .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;margin-top:2rem}
         .contact-info-cards{display:flex;flex-direction:column;gap:1.25rem}
         .contact-card{padding:1.5rem;background:rgba(255,255,255,.7);backdrop-filter:blur(8px);border-radius:var(--radius);border:1px solid rgba(255,255,255,.3);box-shadow:var(--shadow-sm);transition:var(--transition)}
@@ -164,7 +149,6 @@
         .map-placeholder{width:100%;height:220px;background:var(--gray-200);border-radius:var(--radius);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;color:var(--gray-600);font-weight:500;margin-top:1rem;border:2px dashed var(--gray-300);transition:var(--transition);text-decoration:none;color:inherit;cursor:pointer}
         .map-placeholder:hover{border-color:var(--orange);background:rgba(255,107,0,.05)}
         .map-placeholder i{font-size:2.5rem;color:var(--orange)}
-        /* ===== DEVELOPER PAGE ===== */
         .developer-hero{background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);color:#fff;padding:4rem 0;text-align:center;border-radius:0 0 50% 50% / 0 0 20% 20%;margin-top:-1px}
         .developer-hero .dev-name{font-size:3.5rem;font-weight:900;background:linear-gradient(135deg,#FF6B00,#FFA500);-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:inline-block}
         .developer-hero .dev-tagline{font-size:1.3rem;font-weight:300;margin-top:.5rem;color:#ddd}
@@ -182,13 +166,6 @@
         .developer-contact-buttons .btn{min-width:160px;justify-content:center;font-weight:600;padding:.8rem 1.5rem;border-radius:50px;transition:var(--transition);color:#fff}
         .developer-contact-buttons .btn i{margin-right:.5rem}
         .developer-contact-buttons .btn:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 8px 25px rgba(0,0,0,.2)}
-        .btn-whatsapp{background:#25d366}
-        .btn-whatsapp:hover{background:#1ebe5a}
-        .btn-phone{background:#34a853}
-        .btn-phone:hover{background:#2d8f47}
-        .btn-email{background:#d44637}
-        .btn-email:hover{background:#b93a2e}
-        /* ===== FOOTER ===== */
         .footer{background:var(--gray-900);color:var(--gray-300);padding:3rem 0 1.5rem;margin-top:2rem}
         .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2.5rem;margin-bottom:2.5rem}
         .footer-brand h3{color:var(--white);font-size:1.25rem;margin:.5rem 0 .5rem}
@@ -205,7 +182,6 @@
         .footer-contact li i{width:20px;color:var(--orange)}
         .footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem;font-size:.85rem;color:var(--gray-500)}
         .footer-credit i{color:var(--orange)}
-        /* ===== FLOATING SOCIAL ===== */
         .floating-social{position:fixed;bottom:2rem;right:1.5rem;display:flex;flex-direction:column;gap:.75rem;z-index:999}
         .float-btn{display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;color:var(--white);font-size:1.8rem;box-shadow:var(--shadow-lg);transition:var(--transition);position:relative;animation:pulse 2s infinite;border:none;cursor:pointer}
         .float-btn.whatsapp{background:#25d366}
@@ -221,7 +197,6 @@
         .scroll-top:hover{background:var(--orange-dark);transform:scale(1.05)}
         .form-success{display:none;padding:1rem 1.5rem;background:#d4edda;color:#155724;border-radius:var(--radius);border:1px solid #c3e6cb;margin-top:1rem;font-weight:500;text-align:center}
         .form-success.show{display:block}
-        /* ===== RESPONSIVE ===== */
         @media(max-width:992px){.welfare-box{flex-direction:column;text-align:center;padding:2rem}.welfare-quote{justify-content:center}.contact-grid{grid-template-columns:1fr}.developer-profile{flex-direction:column;text-align:center}.developer-hero .dev-name{font-size:2.5rem}}
         @media(max-width:768px){.nav-toggle{display:flex}.nav-menu{position:absolute;top:70px;left:0;width:100%;flex-direction:column;background:rgba(255,255,255,.98);backdrop-filter:blur(16px);padding:1rem 0;gap:0;box-shadow:var(--shadow-lg);border-top:1px solid var(--gray-200);transform:scaleY(0);transform-origin:top;transition:transform .3s ease;opacity:0;pointer-events:none}.nav-menu.open{transform:scaleY(1);opacity:1;pointer-events:auto}.nav-link{padding:.75rem 1.5rem;width:100%;border-radius:0;border-bottom:1px solid var(--gray-100)}.nav-link.active::after{display:none}.hero-stats{gap:1rem;padding:1rem}.stat-number{font-size:1.5rem}.stat-divider{height:30px}.section-title{font-size:1.8rem}.footer-grid{grid-template-columns:1fr;gap:2rem}.footer-bottom{flex-direction:column;text-align:center}.floating-social{bottom:1.5rem;right:1rem}.float-btn{width:48px;height:48px;font-size:1.5rem}.scroll-top{left:1rem;bottom:1.5rem;width:42px;height:42px;font-size:1.2rem}.form-row{grid-template-columns:1fr}.complaint-form-wrapper{padding:1.5rem}.developer-profile .dev-photo{width:140px;height:140px}.developer-contact-buttons .btn{min-width:140px}}
         @media(max-width:480px){.hero-actions .btn{width:100%;justify-content:center}.welfare-box{padding:1.5rem}.welfare-quote{font-size:.95rem;padding:.5rem 1rem}.profile-img{width:100px;height:100px}.developer-hero .dev-name{font-size:2rem}}
@@ -233,7 +208,7 @@
 <nav class="navbar">
     <div class="nav-container">
         <div class="nav-brand" onclick="navigateTo('home')">
-            <img src="./images/logo.png" alt="Ward 16 Logo" class="nav-logo" />
+            <img src="images/logo.png" alt="Ward 16 Logo" class="nav-logo" />
             <span class="brand-text">Ward 16 <span class="brand-highlight">Complaint Portal</span></span>
         </div>
         <button class="nav-toggle" id="navToggle">
@@ -254,9 +229,7 @@
     </div>
 </nav>
 
-<!-- ============================================================ -->
-<!-- ========== PAGE: HOME ========== -->
-<!-- ============================================================ -->
+<!-- ===== HOME PAGE ===== -->
 <section class="page-section active" id="page-home">
     <div class="hero">
         <div class="hero-overlay"></div>
@@ -322,15 +295,13 @@
                     <p>Ward 16 is committed to the holistic development of our community. We believe in transparent governance, active citizen participation, and swift grievance redressal. Together, we can build a cleaner, greener, and more prosperous Panipat.</p>
                     <div class="welfare-quote"><i class="fas fa-quote-left"></i><span>Your complaint is our priority. Your satisfaction is our mission.</span></div>
                 </div>
-                <div class="welfare-image"><img src="./images/logo.png" alt="Ward 16 Logo" /></div>
+                <div class="welfare-image"><img src="images/logo.png" alt="Ward 16 Logo" /></div>
             </div>
         </div>
     </section>
 </section>
 
-<!-- ============================================================ -->
-<!-- ========== PAGE: ABOUT ========== -->
-<!-- ============================================================ -->
+<!-- ===== ABOUT PAGE (UPDATED) ===== -->
 <section class="page-section section-padding" id="page-about">
     <div class="container">
         <div class="section-header text-center">
@@ -339,39 +310,43 @@
             <p class="section-subtitle">Dedicated public servants committed to the welfare and development of Ward 16, Panipat.</p>
         </div>
 
-        <!-- Mayor Section -->
-        <div class="text-center" style="margin-bottom:2.5rem;">
-            <div class="mayor-card">
-                <div class="mayor-img"><img src="./images/mayor-komal-saini.jpg" alt="Mayor Komal Saini" /></div>
+        <!-- Leaders: Mayor + MLA -->
+        <div class="text-center" style="margin-bottom:2.5rem; display:flex; flex-wrap:wrap; justify-content:center; gap:1rem;">
+            <!-- Mayor Komal Saini -->
+            <div class="leader-card">
+                <div class="leader-img"><img src="images/mayor-komal-saini.jpg" alt="Mayor Komal Saini" /></div>
                 <h3>Komal Saini</h3>
-                <div class="mayor-desig">Mayor, Panipat</div>
-                <div class="mayor-detail">भारतीय जनता पार्टी | वार्ड-11 से पार्षद</div>
+                <div class="leader-desig">Mayor, Panipat</div>
+            </div>
+            <!-- MLA Parmod Vij -->
+            <div class="leader-card">
+                <div class="leader-img"><img src="images/parmod-bij.jpg" alt="Parmod Vij" /></div>
+                <h3>Parmod Vij</h3>
+                <div class="leader-desig">MLA, Panipat Urban</div>
             </div>
         </div>
 
         <div class="about-grid">
             <!-- Annu Ajay Sharma -->
             <div class="profile-card glass">
-                <div class="profile-img"><img src="./images/annu-ajay-sharma.jpg" alt="Annu Ajay Sharma" /></div>
+                <div class="profile-img"><img src="images/annu-ajay-sharma.jpg" alt="Annu Ajay Sharma" /></div>
                 <h3>Annu Ajay Sharma</h3>
-                <div class="designation">Municipal Corporation Councillor <br><span style="font-size:0.8rem;font-weight:400;">(Nagar Nigam Parshad)</span></div>
+                <div class="designation">Municipal Corporator <br><span style="font-size:0.8rem;font-weight:400;">Municipal Corporation, Panipat</span></div>
                 <div class="party-tag"><i class="fas fa-tag"></i> BJP</div>
-                <p>A passionate and dedicated public servant, Annu Ajay Sharma has been at the forefront of civic development in Ward 16. With a deep commitment to public welfare, cleanliness, and community engagement, she has spearheaded numerous initiatives to improve infrastructure, sanitation, and citizen services. Her people-first approach and transparent governance style have earned the trust and respect of the community. She believes in empowering citizens through active participation and ensuring every grievance is heard and resolved with empathy and efficiency.</p>
+                <p>Annu Ajay Sharma is a dedicated and dynamic Municipal Corporator representing Ward 16, Panipat. She is committed to public welfare, cleanliness, and community engagement. She believes in transparent governance and empowering citizens through active participation. With a people-first approach, she ensures that every grievance is heard and resolved with empathy and efficiency.</p>
             </div>
             <!-- Ajay Sharma -->
             <div class="profile-card glass">
-                <div class="profile-img"><img src="./images/ajay-sharma.jpg" alt="Ajay Sharma" /></div>
+                <div class="profile-img"><img src="images/ajay-sharma.jpg" alt="Ajay Sharma" /></div>
                 <h3>Ajay Sharma</h3>
                 <div class="designation">Public Representative</div>
-                <p>Ajay Sharma is a dedicated public representative known for his unwavering commitment to citizen service and community coordination. With years of experience in grassroots governance, he has been instrumental in bridging the gap between the administration and the people. His work focuses on civic development projects, ensuring that the voice of every resident is heard and acted upon. Ajay's collaborative approach and hands-on involvement in community welfare activities have made him a trusted and approachable leader in Ward 16.</p>
+                <p>Ajay Sharma is a dedicated public representative known for his unwavering commitment to citizen service and community coordination. With years of experience in grassroots governance, he has been instrumental in bridging the gap between the administration and the people. His work focuses on civic development projects, ensuring that the voice of every resident is heard and acted upon.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ============================================================ -->
-<!-- ========== PAGE: SERVICES ========== -->
-<!-- ============================================================ -->
+<!-- ===== SERVICES PAGE ===== -->
 <section class="page-section section-padding" id="page-services">
     <div class="container">
         <div class="section-header text-center">
@@ -391,9 +366,7 @@
     </div>
 </section>
 
-<!-- ============================================================ -->
-<!-- ========== PAGE: COMPLAINT ========== -->
-<!-- ============================================================ -->
+<!-- ===== COMPLAINT PAGE ===== -->
 <section class="page-section section-padding" id="page-complaint">
     <div class="container">
         <div class="section-header text-center">
@@ -435,9 +408,7 @@
     </div>
 </section>
 
-<!-- ============================================================ -->
-<!-- ========== PAGE: GALLERY ========== -->
-<!-- ============================================================ -->
+<!-- ===== GALLERY PAGE ===== -->
 <section class="page-section section-padding" id="page-gallery">
     <div class="container">
         <div class="section-header text-center">
@@ -446,19 +417,17 @@
             <p class="section-subtitle">A glimpse of our ongoing development projects and community events in Ward 16.</p>
         </div>
         <div class="gallery-grid">
-            <div class="gallery-item"><img src="./images/gallery-1.jpg" alt="Road Development" /><span class="gallery-label">Road Development</span></div>
-            <div class="gallery-item"><img src="./images/gallery-2.jpg" alt="Street Lighting" /><span class="gallery-label">Street Lighting</span></div>
-            <div class="gallery-item"><img src="./images/gallery-3.jpg" alt="Cleanliness" /><span class="gallery-label">Cleanliness Campaign</span></div>
-            <div class="gallery-item"><img src="./images/gallery-4.jpg" alt="Community Meeting" /><span class="gallery-label">Community Meeting</span></div>
-            <div class="gallery-item"><img src="./images/gallery-5.jpg" alt="Water Supply" /><span class="gallery-label">Water Supply Project</span></div>
-            <div class="gallery-item"><img src="./images/gallery-6.jpg" alt="Welfare Program" /><span class="gallery-label">Welfare Program</span></div>
+            <div class="gallery-item"><img src="images/gallery-1-new.jpg" alt="Development Project" /><span class="gallery-label">Development Project</span></div>
+            <div class="gallery-item"><img src="images/gallery-2.jpg" alt="Street Lighting" /><span class="gallery-label">Street Lighting</span></div>
+            <div class="gallery-item"><img src="images/gallery-3.jpg" alt="Cleanliness" /><span class="gallery-label">Cleanliness Campaign</span></div>
+            <div class="gallery-item"><img src="images/gallery-4.jpg" alt="Community Meeting" /><span class="gallery-label">Community Meeting</span></div>
+            <div class="gallery-item"><img src="images/gallery-5.jpg" alt="Water Supply" /><span class="gallery-label">Water Supply Project</span></div>
+            <div class="gallery-item"><img src="images/gallery-6.jpg" alt="Welfare Program" /><span class="gallery-label">Welfare Program</span></div>
         </div>
     </div>
 </section>
 
-<!-- ============================================================ -->
-<!-- ========== PAGE: NOTICES ========== -->
-<!-- ============================================================ -->
+<!-- ===== NOTICES PAGE ===== -->
 <section class="page-section section-padding" id="page-notices">
     <div class="container">
         <div class="section-header text-center">
@@ -476,9 +445,7 @@
     </div>
 </section>
 
-<!-- ============================================================ -->
-<!-- ========== PAGE: CONTACT ========== -->
-<!-- ============================================================ -->
+<!-- ===== CONTACT PAGE ===== -->
 <section class="page-section section-padding" id="page-contact">
     <div class="container">
         <div class="section-header text-center">
@@ -491,8 +458,8 @@
                 <div class="contact-card glass">
                     <div class="contact-icon"><i class="fas fa-user-tie"></i></div>
                     <div class="contact-detail">
-                        <strong>Municipal Corporation Councillor</strong>
-                        <span>Annu Ajay Sharma <span style="font-size:0.7rem;color:var(--gray-600);display:block;">Ward 16, Panipat | BJP</span></span>
+                        <strong>Municipal Corporator</strong>
+                        <span>Annu Ajay Sharma <span style="font-size:0.7rem;color:var(--gray-600);display:block;">Municipal Corporation, Panipat | BJP</span></span>
                     </div>
                 </div>
                 <div class="contact-card glass"><div class="contact-icon"><i class="fas fa-phone"></i></div><div class="contact-detail"><strong>Helpline</strong><span>+91 8901955501</span></div></div>
@@ -519,9 +486,7 @@
     </div>
 </section>
 
-<!-- ============================================================ -->
-<!-- ========== PAGE: DEVELOPER ========== -->
-<!-- ============================================================ -->
+<!-- ===== DEVELOPER PAGE ===== -->
 <section class="page-section section-padding" id="page-developer">
     <div class="container">
         <div class="developer-hero">
@@ -533,7 +498,7 @@
 
         <div class="developer-profile">
             <div class="dev-photo">
-                <img src="./images/developer-photo.jpg" alt="KRISHNA PLUGER" />
+                <img src="images/developer-photo.jpg" alt="KRISHNA PLUGER" />
             </div>
             <div class="dev-info">
                 <h2>Hi, I'm <span style="color:var(--orange);">KRISHNA PLUGER</span></h2>
@@ -560,14 +525,12 @@
     </div>
 </section>
 
-<!-- ============================================================ -->
-<!-- ========== FOOTER ========== -->
-<!-- ============================================================ -->
+<!-- ===== FOOTER ===== -->
 <footer class="footer">
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand">
-                <img src="./images/logo.png" alt="Ward 16 Logo" class="footer-logo" />
+                <img src="images/logo.png" alt="Ward 16 Logo" class="footer-logo" />
                 <h3>Ward 16 Public Complaint Portal</h3>
                 <p>Panipat, Haryana — A citizen-first initiative for transparent and responsive governance.</p>
                 <div class="footer-social">
@@ -618,7 +581,6 @@
 <!-- ===== JAVASCRIPT ===== -->
 <script>
     document.addEventListener('DOMContentLoaded', function(){
-        // Mobile Nav
         const navToggle = document.getElementById('navToggle');
         const navMenu = document.getElementById('navMenu');
         navToggle.addEventListener('click', function(){
@@ -638,7 +600,6 @@
             }
         });
 
-        // Navigation
         const navLinks = document.querySelectorAll('.nav-link[data-page]');
         const pageSections = document.querySelectorAll('.page-section');
         window.navigateTo = function(pageId){
@@ -659,7 +620,6 @@
             });
         });
 
-        // Counter
         const statNumbers = document.querySelectorAll('.stat-number');
         const counterObserver = new IntersectionObserver(function(entries){
             entries.forEach(function(entry){
@@ -678,7 +638,6 @@
         }, { threshold: 0.5 });
         statNumbers.forEach(function(stat){ counterObserver.observe(stat); });
 
-        // Scroll Top
         const scrollBtn = document.getElementById('scrollTop');
         window.addEventListener('scroll', function(){
             if(window.scrollY > 400) scrollBtn.classList.add('visible');
@@ -688,7 +647,6 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
-        // Forms (demo)
         const complaintForm = document.getElementById('complaintForm');
         const formSuccess = document.getElementById('formSuccess');
         if(complaintForm){
