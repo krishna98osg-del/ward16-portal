@@ -111,6 +111,11 @@
         .hero-highlight::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,var(--orange),var(--orange-light));border-radius:2px}
         .hero-subtitle{font-size:clamp(1.05rem,2vw,1.3rem);color:var(--gray-500);max-width:650px;margin:0 auto 2.5rem;line-height:1.8}
         .hero-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin-bottom:3.5rem}
+        /* BJP Logo Animation */
+        .bjp-logo-wrap{display:flex;justify-content:center;margin-top:1.5rem;animation:fadeInUp 1s ease forwards;opacity:0}
+        @keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+        .bjp-logo-wrap img{height:70px;width:auto;animation:pulseBJP 3s ease-in-out infinite;filter:drop-shadow(0 4px 12px rgba(255,107,0,.2))}
+        @keyframes pulseBJP{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.06);opacity:.9}}
         .hero-stats{display:flex;justify-content:center;align-items:center;gap:2.5rem;flex-wrap:wrap;padding:1.8rem 2.5rem;background:rgba(255,255,255,.7);backdrop-filter:blur(12px);border-radius:var(--radius-lg);border:1px solid rgba(255,255,255,.8);box-shadow:var(--shadow-xl);max-width:650px;margin:0 auto}
         .stat-item{text-align:center}
         .stat-number{display:block;font-size:2.2rem;font-weight:800;color:var(--orange);line-height:1.2}
@@ -339,6 +344,10 @@
                 <button class="btn btn-primary btn-large" onclick="navigateTo('complaint')"><i class="fas fa-pen-to-square"></i> Register Complaint</button>
                 <button class="btn btn-secondary btn-large" onclick="navigateTo('services')"><i class="fas fa-circle-info"></i> Explore Services</button>
             </div>
+            <!-- BJP Logo (Animated) -->
+            <div class="bjp-logo-wrap">
+                <img src="images/bjp-logo.png" alt="BJP Logo" />
+            </div>
             <div class="hero-stats">
                 <div class="stat-item"><span class="stat-number" data-target="1250">0</span><span class="stat-label">Complaints Resolved</span></div>
                 <div class="stat-divider"></div>
@@ -530,7 +539,7 @@
 </section>
 
 <!-- ============================================================ -->
-<!-- ========== COMPLAINT PAGE ========== -->
+<!-- ========== COMPLAINT PAGE (Formspree Fixed) ========== -->
 <!-- ============================================================ -->
 <section class="page-section section-padding" id="page-complaint">
     <div class="container">
@@ -540,6 +549,7 @@
             <p class="section-subtitle">Submit your complaint online. Our team will respond promptly and work towards a swift resolution.</p>
         </div>
         <div class="complaint-form-wrapper glass reveal">
+            <!-- FIXED: Correct Formspree Action URL -->
             <form action="https://formspree.io/f/maqaware" method="POST" enctype="multipart/form-data">
                 <div class="form-row">
                     <div class="form-group">
