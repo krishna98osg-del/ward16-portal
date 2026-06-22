@@ -539,7 +539,7 @@
 </section>
 
 <!-- ============================================================ -->
-<!-- ========== COMPLAINT PAGE (NEW FORM ID: mjgqvpad) ========== -->
+<!-- ========== COMPLAINT PAGE (UPDATED: NO PHOTO UPLOAD) ========== -->
 <!-- ============================================================ -->
 <section class="page-section section-padding" id="page-complaint">
     <div class="container">
@@ -549,8 +549,13 @@
             <p class="section-subtitle">Submit your complaint online. Our team will respond promptly and work towards a swift resolution.</p>
         </div>
         <div class="complaint-form-wrapper glass reveal">
-            <!-- UPDATED: New Formspree Action URL -->
-            <form action="https://formspree.io/f/mjgqvpad" method="POST" enctype="multipart/form-data">
+            <!-- FormSubmit (No File Upload) -->
+            <form action="https://formsubmit.co/ward16panipat@gmail.com" method="POST">
+                <!-- Hidden fields -->
+                <input type="hidden" name="_subject" value="New Complaint Received from Ward 16 Portal!">
+                <input type="hidden" name="_replyto" value="email">
+                <input type="hidden" name="_captcha" value="false">
+                
                 <div class="form-row">
                     <div class="form-group">
                         <label for="fullName">Full Name <span class="required">*</span></label>
@@ -590,12 +595,7 @@
                     <label for="description">Complaint Description <span class="required">*</span></label>
                     <textarea id="description" name="description" class="form-control" placeholder="Describe your issue in detail..." required></textarea>
                 </div>
-                <div class="form-group">
-                    <label>Photo Upload <span style="font-weight:400;color:var(--gray-500);">(optional)</span></label>
-                    <label class="form-file-label" for="photoUpload"><i class="fas fa-cloud-upload-alt"></i> Choose a photo</label>
-                    <input type="file" id="photoUpload" name="attachment" class="form-file-input" accept="image/*" />
-                    <span style="font-size:.8rem;color:var(--gray-400);display:block;margin-top:.3rem;">Upload an image of the issue (JPEG, PNG, up to 5MB)</span>
-                </div>
+                <!-- PHOTO UPLOAD SECTION REMOVED -->
                 <button type="submit" class="btn btn-primary form-submit"><i class="fas fa-paper-plane"></i> Submit Complaint</button>
                 <div class="form-success" id="formSuccess"><i class="fas fa-check-circle"></i> Your complaint has been submitted successfully!</div>
             </form>
@@ -742,7 +742,7 @@
             </div>
             <div class="contact-form-wrapper glass reveal">
                 <h3>Send a Message</h3>
-                <!-- Contact Form Also Updated with New Form ID -->
+                <!-- Contact Form (No file upload, uses Formspree) -->
                 <form id="contactForm" action="https://formspree.io/f/mjgqvpad" method="POST">
                     <div class="form-group"><label for="contactName">Your Name <span class="required">*</span></label><input type="text" id="contactName" name="name" class="form-control" placeholder="Enter your name" required /></div>
                     <div class="form-group"><label for="contactEmail">Email <span class="required">*</span></label><input type="email" id="contactEmail" name="email" class="form-control" placeholder="Enter your email" required /></div>
@@ -977,17 +977,7 @@
             });
         }
         
-        const fileInput = document.getElementById('photoUpload');
-        if(fileInput){
-            fileInput.addEventListener('change', function(){
-                const label = this.closest('.form-group').querySelector('.form-file-label');
-                if(this.files && this.files.length > 0){
-                    label.innerHTML = '<i class="fas fa-check-circle"></i> ' + this.files[0].name;
-                } else {
-                    label.innerHTML = '<i class="fas fa-cloud-upload-alt"></i> Choose a photo';
-                }
-            });
-        }
+        // File input removed, so no need for that listener
 
         // ===== Typing Animation for Developer Name =====
         const nameElement = document.getElementById('devName');
